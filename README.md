@@ -132,6 +132,74 @@ O comando `npm run seed` cria:
 
 ---
 
+## Testes e Validação
+
+### Ferramenta utilizada
+
+**Thunder Client** — extensão leve de cliente REST integrada ao Visual Studio Code. Permite criar e executar requisições HTTP diretamente no editor, organizar endpoints em coleções, definir variáveis de ambiente (ex.: `baseUrl`, `token`) e visualizar respostas formatadas em JSON. Alternativa direta ao Postman sem necessidade de instalar aplicação separada.
+
+---
+
+### Evidências de Teste
+
+#### POST /auth/register — Registrar usuário
+
+Register faltando informações
+![Register faltando informações](docs/prints/register_faltando_info.png)
+
+Register com sucesso
+![Register com sucesso](docs/prints/register_success.png)
+
+---
+
+#### POST /auth/login — Login e obtenção do JWT
+
+Login com dados inválidos
+![Login com dados inválidos](docs/prints/login_invalido.png)
+
+Login com sucesso retornando token
+![Login com sucesso](docs/prints/login_success.png)
+
+---
+
+#### GET /habits — Listar hábitos
+
+Read do hábito sem token de autenticação
+![Listar hábitos sem token](docs/prints/habits_sem_token.png)
+
+Read dos hábitos com token correto
+![Listar hábitos com token](docs/prints/read_habits.png)
+
+---
+
+#### POST /habits — Criar hábito
+
+Criando hábito
+![Criar hábito](docs/prints/create_habit.png)
+
+---
+
+#### GET /habits/:id — Buscar hábito por ID
+
+Read do hábito pelo ID
+![Buscar hábito por ID](docs/prints/read_pelo_id.png)
+
+---
+
+#### PUT /habits/:id — Atualizar hábito
+
+Update do hábito pelo id mudando parcialmente as informações
+![Atualizar hábito](docs/prints/update_habit.png)
+
+---
+
+#### DELETE /habits/:id — Remover hábito
+
+Delete do hábito
+![Remover hábito](docs/prints/delete_habit.png)
+
+---
+
 ## Pesquisa e Contextualização da Pilha Tecnológica
 
 Esta seção discute as escolhas tecnológicas do projeto, situando-as no ecossistema atual de desenvolvimento de APIs e relacionando-as com alternativas estudadas na disciplina.
